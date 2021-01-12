@@ -212,7 +212,11 @@ input{
             let hh=date.getHours();
             let min=date.getMinutes();
             let ss=date.getSeconds();
-            document.getElementById("data").innerHTML=day+", "+year+"-"+dd+"-"+mm+" "+hh+"/"+min+"/"+ss;
+            function weeksBetween(d1, d2) {
+                return Math.round((d2 - d1) / (7 * 24 * 60 * 60 * 1000));
+            }
+           let rez6= weeksBetween(new Date(), new Date(2021, 8, 1));
+            document.getElementById("data").innerHTML=day+", "+year+"-"+dd+"-"+mm+" "+hh+"/"+min+"/"+ss+"<br> Залишилося "+rez6+" тижнів до осені";
         </script>
     </div>
 
