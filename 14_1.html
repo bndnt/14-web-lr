@@ -91,6 +91,10 @@ input{
             font-size: 13pt;
             transition-duration: .2s;
         }
+
+        .five{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -187,6 +191,30 @@ input{
         }
     </script>
 </div>
+
+
+
+    <!-- день_ тижня, РРРР -ДД-ММ ЧЧ/ММ/СС-->
+<!--        Внизу поцентру-->
+<!--        основного-->
+<!--        блоку з-->
+<!--        контентом Число тижнів до початку осені.7-->
+    <div class="five">
+        <div id="data"></div>
+        <script>
+            let date = new Date();
+            let weekday = date.getDay();
+            let options = { weekday: 'long'};
+            let day=new Intl.DateTimeFormat('en-US', options).format(date);
+            let year=date.getFullYear();
+            let dd=String(date.getDate()).padStart(2, '0');
+            let mm=String(date.getMonth() + 1).padStart(2, '0');
+            let hh=date.getHours();
+            let min=date.getMinutes();
+            let ss=date.getSeconds();
+            document.getElementById("data").innerHTML=day+", "+year+"-"+dd+"-"+mm+" "+hh+"/"+min+"/"+ss;
+        </script>
+    </div>
 
 </div>
 
