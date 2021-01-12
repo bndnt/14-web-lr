@@ -34,7 +34,7 @@ input{
             top: 90px;
             position: absolute;
             border-top: 20px solid transparent;
-            border-right: 40px solid darkseagreen;
+            border-right: 40px solid #70a970;
             border-bottom: 20px solid transparent;
         }
 
@@ -82,7 +82,7 @@ input{
             margin:35px auto;
             padding: 20px 35px;
             font-family: "Apple Braille";
-            background: #717BC3;
+            background:#a5abd9 ;
             box-shadow: 15px 15px 10px lightgray;
         }
 
@@ -99,7 +99,7 @@ input{
 </head>
 <body>
 
-<div class="name">
+<div class="name" onmouseover="this.style.backgroundColor=' #70a970'" onmouseout="this.style.backgroundColor=''">
     <p>Hi,
         <script>
             let name =prompt('what is your name?','noname');
@@ -108,9 +108,9 @@ input{
     </p>
 </div>
 <div class="main">
-<div class="sec">
+<div class="sec" onmouseover="this.style.backgroundColor=' #dd7f6e'" onmouseout="this.style.backgroundColor=''">
     <h3>Task 3</h3>
-    <p>
+    <p >
         Напишіть скрипт для складання двох чисел, двох рядків, рядка і числа.
     </p>
     <label for="a">Input first number</label>&nbsp&nbsp&nbsp&nbsp
@@ -139,7 +139,7 @@ input{
     </script>
 </div>
 
-<div class="third">
+<div class="third" onmouseover="this.style.backgroundColor='#a1c2dd '" onmouseout="this.style.backgroundColor=''">
     <h3>Task 4</h3>
     <p>
         Використовуючи JavaScript знайдіть значення виразу
@@ -171,7 +171,7 @@ input{
     </script>
 </div>
 
-<div class="four">
+<div class="four" onmouseover="this.style.backgroundColor='#717BC3 '" onmouseout="this.style.backgroundColor=''">
     <h3>
         Task 5
     </h3>
@@ -199,7 +199,7 @@ input{
 <!--        основного-->
 <!--        блоку з-->
 <!--        контентом Число тижнів до початку осені.7-->
-    <div class="five">
+    <div class="five" onmouseover="this.style.color='#846fc3'" onmouseout="this.style.color=''">
         <div id="data"></div>
         <script>
             let date = new Date();
