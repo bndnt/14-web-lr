@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .main{
+            width: 600px;
+            margin:auto;
+/*border:1px solid black;*/
+        }
+
+input{
+    width: 100px;
+    marging-top: 7px;
+}
+        .name{
+            width: 400px;
+            height: 150px;
+            background: darkseagreen;
+            box-shadow: 15px 15px 10px lightgray;
+            margin:55px auto 75px;
+            font-family: "Apple Braille";
+            font-size: 24pt;
+            text-align: center;
+            padding: 25px 0 0 0;
+            border-radius: 35px;
+        }
+        .name:before {
+            content: "";
+            width: 0;
+            height: 0;
+            right: 100%;
+            top: 90px;
+            position: absolute;
+            border-top: 20px solid transparent;
+            border-right: 40px solid darkseagreen;
+            border-bottom: 20px solid transparent;
+        }
+
+        .name:hover{
+            transform: scale(1.3);
+            font-size: 26pt;
+            transition-duration: .2s;
+        }
+
+        .sec{
+            width: 350px;
+            margin:35px 0 ;
+            left:100px;
+            background: #E9A79C;
+            padding: 20px 35px;
+            font-family: "Apple Braille";
+            line-height: 1.5;
+            box-shadow: 15px 15px 10px lightgray;
+        }
+
+        .sec:hover{
+            transform: scale(1.1);
+            font-size: 13pt;
+            transition-duration: .2s;
+        }
+
+
+        .third{
+            width: 350px;
+            margin:35px 0 35px 200px;
+            background: #B7D0E5;
+            padding: 20px 35px;
+            font-family: "Apple Braille";
+            box-shadow: 15px 15px 10px lightgray;
+        }
+
+        .third:hover{
+            transform: scale(1.1);
+            font-size: 13pt;
+            transition-duration: .2s;
+        }
+        .four{
+            width: 350px;
+
+            margin:35px auto;
+            padding: 20px 35px;
+            font-family: "Apple Braille";
+            background: #717BC3;
+            box-shadow: 15px 15px 10px lightgray;
+        }
+
+        .four:hover{
+            transform: scale(1.1);
+            font-size: 13pt;
+            transition-duration: .2s;
+        }
+    </style>
+</head>
+<body>
+
+<div class="name">
+    <p>Hi,
+        <script>
+            let name =prompt('what is your name?','noname');
+            document.write(name);
+        </script>!
+    </p>
+</div>
+<div class="main">
+<div class="sec">
+    <h3>Task 3</h3>
+    <p>
+        Напишіть скрипт для складання двох чисел, двох рядків, рядка і числа.
+    </p>
+    <label for="a">Input first number</label>&nbsp&nbsp&nbsp&nbsp
+    <input type="text" id="a" onclick="value=''" value="0" name="a"><br>
+    <label for="b">Input second number  </label>
+    <input type="text" id="b" onclick="value=''" value="0" name="b"><br>
+    <label for="c">Input first string</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <input type="text" id="c" onclick="value=''" value="0" name="c"><br>
+    <label for="d">Input second string </label>&nbsp
+    <input type="text" id="d" onclick="value=''" value="0" name="d"><br>
+    <input type="button" OnClick="button()" value="start">
+    <div id="output"></div>
+    <script>
+        function button() {
+            let n = document.getElementById("a").value;//беру и передаю в переменную значение
+            let n1 = Number(n);//делаю переменную типа нумбер
+            let m = document.getElementById("b").value;
+            let m1=Number(m);//делаю переменную типа нумбер
+            let sum = m1 + n1;//складываю числа
+            let name = document.getElementById("c").value;//передаю еще переменную
+            let surname = document.getElementById("d").value;//и еще
+            let sum2 = name + surname;
+            let sum3 = name + sum;
+            document.getElementById("output").innerHTML="1. "+sum+"<br>2. "+sum2+"<br>3. "+sum3;//вывожу в хтмл док результат
+        }
+    </script>
+</div>
+
+<div class="third">
+    <h3>Task 4</h3>
+    <p>
+        Використовуючи JavaScript знайдіть значення виразу
+        (25*x*2+17*y) /5+888 при x=v*2.5-n, y=v*0.3,
+        і значення виразу 
+        (87*y/8+2*x/5-33)*6 при x=7*v-5, y=5*v-7
+    </p>
+    <label for="v">Input v</label>
+    <input type="text" id="v" onclick="value=''" value="0" name="v"><br>
+    <label for="n">Input n</label>
+    <input type="text" id="n" onclick="value=''" value="0" name="n"><br>
+    <input type="button" OnClick="rez()" value="start">
+    <div id="output2"></div>
+    <script>
+        function rez(){
+            let v=document.getElementById("v").value;
+            let v1=Number(v);//делаю переменную типа нумбер
+            let n=document.getElementById("n").value;
+            let n1=Number(n);//делаю переменную типа нумбер
+            let x1=v*2.5-n;
+            let y1 =v*0.3;
+            let rez1=(25*x1*2+17*y1)/5+888;
+            let x2=v*2.5-n;
+            let y2 =v*0.3;
+            let rez2=(87*y2/8+2*x2/5-33)*6;
+            document.getElementById("output2").innerHTML="(25*x*2+17*y) /5+888 при x=v*2.5-n, y=v*0.3 ="+
+                Math.round(rez1)+"<br>(87*y/8+2*x/5-33)*6 при x=7*v-5, y=5*v-7 = "+Math.round(rez2);//округляю к целым и вывожу числа
+        }
+    </script>
+</div>
+
+<div class="four">
+    <h3>
+        Task 5
+    </h3>
+    <p>
+        Запропонуйте відвідувачу ввести два числа по черзі.
+        Виведіть у вікно alert результат складання.
+    </p>
+    <input type="button" onclick="two()" value="calculate">
+    <script>
+        function two(){
+            let x3=+prompt("input first number1",'');//прошу ввести число
+            let x4=Number(x3);
+            let y3=+prompt('input second number2','');//прошу ввести число2
+            let y4=Number(y3);
+            let z=x3+y3;
+            alert(x4+"+"+y4+"="+z)
+        }
+    </script>
+</div>
+
+</div>
+
+<!--<script>-->
+<!--    document.getElementById('a').value = "";//очищаю поля от 0-->
+<!--    document.getElementById('b').value = "";-->
+<!--    document.getElementById('c').value = "";-->
+<!--    document.getElementById('d').value = "";-->
+<!--    document.getElementById('v').value = "";-->
+<!--    document.getElementById('n').value = "";-->
+<!--</script>-->
+</body>
+</html>
