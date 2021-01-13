@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="mySt.css">
 </head>
 <body>
 <div class="main" id="main">
     <div >
         <div id="addArr"></div>
-        <div></div>
+        <div id="sum"></div>
+        <div id="min/max"></div>
+        <div id="rand"></div>
         <script>
           let arr=[];
           let n=909392390923223;
@@ -28,7 +31,19 @@
                   //  }
               }
           for (let i=0;i<arr.length;i++)
-        document.getElementById('addArr').innerHTML=arr;
+        document.getElementById('addArr').innerHTML="Array:"+arr;
+          let sum=0;
+          for (let i=0;i<arr.length;i++){
+              sum=sum+arr[i];
+          }
+          document.getElementById('sum').innerHTML="Sum = "+sum;
+
+          arr.sort(function(a,b){return a-b});
+          let max=arr[arr.length-1];
+          let min=arr[0];
+          document.getElementById('min/max').innerHTML="sort:"+arr+"<br>min = "+min+"<br>max = "+max;
+          let rand=min+Math.floor(Math.random(arr)*(max+1-min));
+          document.getElementById('rand').innerHTML="Random number:"+rand;
         </script>
 
     </div>
