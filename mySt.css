@@ -1,8 +1,9 @@
 .main{
-    width: 450px;
+    width: auto;
     background: #a5abd9;
     font-size: 25pt;
     font-family: "Apple Chancery";
     margin:25px auto;
     padding:15px 10px 20px 30px;
+    text-overflow: clip;
 }

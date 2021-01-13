@@ -41,7 +41,7 @@
           arr.sort(function(a,b){return a-b});
           let max=arr[arr.length-1];
           let min=arr[0];
-          document.getElementById('min/max').innerHTML="sort:"+arr+"<br>min = "+min+"<br>max = "+max;
+          document.getElementById('min/max').innerHTML="Sort:"+arr;
           // let rand=min+Math.floor(Math.random(arr)*(max+1-min));
           let rand =arr[Math.floor(Math.random()*arr.length)];
           document.getElementById('rand').innerHTML="Random number:"+rand;
